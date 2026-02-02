@@ -1,0 +1,6 @@
+CREATE TABLE history
+(
+    id      INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    startAt TIMESTAMP,
+    endAt   TIMESTAMP
+);

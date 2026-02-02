@@ -1,0 +1,6 @@
+CREATE TABLE owner
+(
+    id      INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name    VARCHAR,
+    user_id INT NOT NULL REFERENCES auto_user (id)
+);

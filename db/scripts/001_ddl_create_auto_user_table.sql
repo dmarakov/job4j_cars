@@ -1,6 +1,6 @@
 create table auto_user
 (
-    id   serial primary key,
-    login varchar not null unique,
+    id       INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    login    varchar not null unique,
     password varchar not null
 );

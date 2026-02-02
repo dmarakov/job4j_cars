@@ -13,15 +13,15 @@ import java.util.List;
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String description;
     private LocalDateTime created;
     @ManyToOne
     @JoinColumn(name = "auto_user_id")
     private User user;
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id")
-    private PriceHistory priceHistory;
+    @JoinColumn(name = "post_id")
+    private List<PriceHistory> priceHistory = new ArrayList<>();
 
     @ManyToMany
     @JoinTable(

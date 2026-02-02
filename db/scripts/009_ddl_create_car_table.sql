@@ -1,0 +1,6 @@
+CREATE TABLE car
+(
+    id        INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name      VARCHAR,
+    engine_id INT NOT NULL REFERENCES engine (id)
+);

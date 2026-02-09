@@ -41,7 +41,8 @@ public class CarRepository {
 
     public List<Car> findByEngineName(String key) {
         return crudRepository.query(
-            "from Car where name like :fKey", Car.class,
+            "select c from Car c join c.engine e where e.name like :fKey",
+            Car.class,
             Map.of("fKey", "%" + key + "%")
         );
     }
